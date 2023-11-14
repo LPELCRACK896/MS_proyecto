@@ -8,5 +8,5 @@ class IEndRoad(ABC):
         pass
 
     @abstractmethod
-    def receive_next_vehicle(self):
+    def receive_next_vehicle(self, vehicle):
         pass
