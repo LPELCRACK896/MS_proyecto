@@ -6,17 +6,27 @@ from IEndRoad import IEndRoad
 import simpy as sp
 import stats as st
 
-
-def connect_roads(road_start: IWay, road_end: IEndRoad):
-    pass
+road_per_car_der_norte = Road("AUX PERIFERICO CARRIL DERECHO NORTE", 904.4)  # 0
 
 
-def disconnect_roads(road_start: IWay, road_end: IEndRoad):
-    pass
+road_per_car_izq_norte = Road("AUX PERIFERICO CARRIL IZQUIERDO NORTE", 904.4)  # 1
 
+villa_linda_car_der = Road("BOULEVAR VILLA LINDA CARRIL DERECHO", 800.6)  # 5
+villa_linda_car_izq = Road("BOULEVAR VILLA LINDA CARRIL IZQUIERDO", 800.6)  # 4
 
-def vehicle_join_road(vehicle: Vehicle, road: Road):
-    pass
+puente_car_izq = Road("PUENTE VILLA LINDA CARRIL IZQUIERDO", 107.03)  # 10
+puente_car_der = Road("PUENTE VILLA LINDA CARRIL DERECHO", 107.03)  # 11
+
+roads = [
+    road_per_car_der_norte,
+    road_per_car_izq_norte,
+
+    villa_linda_car_izq,
+    villa_linda_car_der,
+
+    puente_car_izq,
+    puente_car_der
+]
 
 
 def main():

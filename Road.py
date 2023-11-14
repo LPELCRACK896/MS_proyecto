@@ -7,6 +7,8 @@ from IEndRoad import IEndRoad
 
 class Road(IWay, IEndRoad):
 
+    name: str
+
     line: List[Vehicle]
 
     inputs: List[IWay]  # List of Roads
@@ -16,8 +18,9 @@ class Road(IWay, IEndRoad):
 
     is_special_road: bool
 
-    def __init__(self, length: float):
-        pass
+    def __init__(self, name, length: float):
+        self.name = name
+        self.length = length
 
     def connect_some_output(self, road):
         pass
@@ -25,7 +28,7 @@ class Road(IWay, IEndRoad):
     def connect_some_input(self, road):
         pass
 
-    def receive_next_car(self):
+    def receive_next_vehicle(self):
         pass
 
     def get_next_in_line(self):

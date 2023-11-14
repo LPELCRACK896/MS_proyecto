@@ -4,9 +4,14 @@ from Vehicle import Vehicle
 
 
 class InputWay(IWay):
+
     frequency: int
     car_rate: list
     queue: List[Vehicle]
+    outputs: list
+
+    def connect_some_output(self, road):
+        pass
 
     def a_second_goes(self):  # Change name
         """
